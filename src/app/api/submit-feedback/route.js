@@ -1,4 +1,3 @@
-// app/api/submit-feedback/route.js
 import { NextResponse } from "next/server";
 import clientPromise from "../../../../lib/mongodb";
 
@@ -6,8 +5,6 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const { fullName, email, message, timestamp } = body;
-
-    // Basic validation
     if (!fullName || !email || !message) {
       return NextResponse.json(
         { message: "All fields are required" },
@@ -15,11 +12,9 @@ export async function POST(request) {
       );
     }
 
-    // Connect to MongoDB
     const client = await clientPromise;
     const db = client.db("feedbackCollector");
 
-    // Insert feedback
     await db.collection("feedbacks").insertOne({
       fullName,
       email,

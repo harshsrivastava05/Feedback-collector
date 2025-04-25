@@ -1,4 +1,3 @@
-// app/components/FeedbackList.jsx
 "use client";
 
 import { useState, useEffect } from "react";

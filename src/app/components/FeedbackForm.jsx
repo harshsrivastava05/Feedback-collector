@@ -1,4 +1,3 @@
-// app/components/FeedbackForm.jsx
 "use client";
 
 import { useState } from "react";
@@ -41,7 +40,6 @@ const FeedbackForm = ({ onSubmitSuccess }) => {
             [name]: value
         });
 
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors({
                 ...errors,
@@ -77,7 +75,6 @@ const FeedbackForm = ({ onSubmitSuccess }) => {
             setSubmitSuccess(true);
             if (onSubmitSuccess) onSubmitSuccess();
 
-            // Reset success message after 3 seconds
             setTimeout(() => setSubmitSuccess(false), 3000);
 
         } catch (error) {

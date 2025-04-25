@@ -1,4 +1,3 @@
-// app/components/ThemeToggle.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -7,7 +6,7 @@ const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        // Check for saved theme preference or system preference
+
         const darkModePref = localStorage.getItem('darkMode');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 

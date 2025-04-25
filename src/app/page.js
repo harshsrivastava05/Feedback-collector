@@ -1,4 +1,3 @@
-// app/page.js
 "use client";
 
 import { useState } from 'react';
@@ -10,8 +9,6 @@ import FeedbackList from './components/FeedbackList';
 export default function Home() {
   const [showAdmin, setShowAdmin] = useState(false);
   const [feedbackCount, setFeedbackCount] = useState(0);
-
-  // Update feedback count when admin view is toggled
   const handleFeedbackUpdate = () => {
     setFeedbackCount(feedbackCount + 1);
   };
